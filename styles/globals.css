@@ -3,25 +3,75 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --logo-color: #2d568c;
+  --dark-logo-color: #193b68;
+  --par-color: #03e3df;
+  --par-border-size: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .link-active {
+    @apply bg-[var(--logo-color)] text-white;
+  }
+  .nav-link {
+    @apply p-2 rounded-md cursor-pointer;
+    transition-property: background, color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+  }
+  .nav-link:hover {
+    @apply bg-[var(--logo-color)] text-white;
+  }
+  .container {
+    @apply px-14 min-w-full mx-0;
+  }
+  .btn {
+    @apply mt-3 p-2 bg-[var(--logo-color)] text-white rounded-md;
+  }
+  .title::before {
+    @apply absolute -bottom-6 bg-black w-full h-[2px];
+    content: "";
+  }
+  .title::after {
+    @apply absolute left-0 -bottom-6 border border-black border-solid bg-white w-5 aspect-square rounded-full;
+    content: "";
+    transform: translate(-50%, 50%);
+    animation: right-left 2s linear infinite alternate;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .structure-list-item {
+    @apply cursor-pointer select-none hover:bg-[#378B86] py-1 rounded-md transition-colors ease-linear duration-200;
+  }
+  .paragraph {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    @apply px-3 py-6 rounded-lg;
+  }
+  .card {
+    @apply h-52 bg-[#535E9C];
+  }
+  .footer-btn {
+    @apply bg-white text-black rounded-3xl flex gap-3 items-center justify-center py-2 px-5;
+  }
+}
+
+@keyframes right-left {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
