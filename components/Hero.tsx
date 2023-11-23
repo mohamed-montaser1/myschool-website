@@ -17,7 +17,12 @@ function Hero() {
             {translate["welcome-heading"]}
           </h1>
           <p className="mt-3">{translate["global-private"]}</p>
-          <button className="btn bg-[#378B86]">{translate["btn-more"]}</button>
+          <a
+            href={`#${translate["link-about"]}`}
+            className="btn inline-block bg-[#378B86] hover:bg-[#6c9996] transition-all ease-in-out hover:scale-105"
+          >
+            {translate["btn-more"]}
+          </a>
         </div>
         <Image src={heroImage} alt="hero image" width={700} />
       </div>

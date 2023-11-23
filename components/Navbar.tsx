@@ -91,6 +91,10 @@ const ListElement: React.FC<ListElementProps> = ({
     );
   }
 
+  function goTo(link: string) {
+    location.hash = link;
+  }
+
   function DropDownItem() {
     return (
       <>
@@ -105,11 +109,17 @@ const ListElement: React.FC<ListElementProps> = ({
               showStructureMenu ? "opacity-1" : "opacity-0"
             }`}
           >
-            <li className="structure-list-item">
+            <li
+              className="structure-list-item"
+              onClick={() => goTo(`#${title}`)}
+            >
               <a href={`#${title}`}>{translate["management"]}</a>
             </li>
             <hr />
-            <li className="structure-list-item">
+            <li
+              className="structure-list-item"
+              onClick={() => goTo(`#${title}`)}
+            >
               <a href={`#${title}`}>{translate["teachers"]}</a>
             </li>
           </ul>
