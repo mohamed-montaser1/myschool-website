@@ -18,11 +18,6 @@ let links: Link[] = [
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState<number>(1);
-  const [showLoginMenu, setShowLoginMenu] = useState<boolean>(false);
-
-  const handleToggleLoginMenu = () => {
-    setShowLoginMenu((prev) => !prev);
-  };
 
   const onClickCallback = (newActiveLink: number) => {
     setActiveLink(newActiveLink);

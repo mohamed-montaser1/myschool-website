@@ -21,7 +21,7 @@ const data: Array<TNew> = [
   },
   {
     img: img3,
-    title: translate["news-card-title"],
+    title: translate["activities-card-title"],
     p: translate["activities-card-p"],
   },
   {
