@@ -56,6 +56,12 @@
   .footer-btn {
     @apply bg-white text-black rounded-3xl flex gap-3 items-center justify-center py-2 px-5;
   }
+  .whatsapp-btn {
+    animation: zoom 1s ease-in-out infinite alternate;
+  }
+  .facebook-btn {
+    animation: zoom 1s ease-in-out infinite alternate;
+  }
 }
 
 @keyframes right-left {
@@ -64,6 +70,15 @@
   }
   100% {
     left: 100%;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
   }
 }
 

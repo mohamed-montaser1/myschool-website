@@ -1,3 +1,5 @@
+import translate from "@/data/translate.json";
+
 function Map() {
   return (
     <iframe
@@ -6,6 +8,7 @@ function Map() {
       allowFullScreen={true}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
+      id={`${translate["link-contact"]}`}
     ></iframe>
   );
 }
