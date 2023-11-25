@@ -1,5 +1,6 @@
 import translate from "@/data/translate.json";
 import { useState, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 
 type Link = {
   id: number;
@@ -25,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center">
-      <ul className="flex gap-10">
+      <ul className="flex gap-10 max-[991px]:hidden">
         {links.map((listEl) => (
           <ListElement
             title={listEl.title}
@@ -37,6 +38,9 @@ const Navbar = () => {
           />
         ))}
       </ul>
+      <button className="hidden max-[991px]:block text-2xl">
+        <FaBars />
+      </button>
     </nav>
   );
 };

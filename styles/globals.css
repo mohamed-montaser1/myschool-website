@@ -23,10 +23,13 @@
     @apply bg-[var(--logo-color)] text-white;
   }
   .container {
-    @apply px-14 min-w-full mx-0;
+    @apply px-14 min-w-full mx-0 max-[468px]:px-10;
   }
   .btn {
     @apply mt-3 p-2 bg-[var(--logo-color)] text-white rounded-md;
+  }
+  .title {
+    font-size: clamp(20px, 5vw, 2.25rem);
   }
   .title::before {
     @apply absolute -bottom-6 bg-black w-full h-[2px];
@@ -60,7 +63,16 @@
     animation: zoom 1s ease-in-out infinite alternate;
   }
   .facebook-btn {
-    animation: zoom 1s ease-in-out infinite alternate;
+    animation: zoom 1s ease-in-out 1s infinite alternate;
+  }
+  .n-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media (max-width: 510px) {
+  .n-container {
+    grid-template-columns: repeat(auto-fit, min(400px, 1fr)) !important;
   }
 }
 
@@ -89,4 +101,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
 }

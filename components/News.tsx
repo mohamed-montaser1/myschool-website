@@ -45,7 +45,9 @@ function News() {
   return (
     <section className="mt-12">
       <Title text={translate["link-events"]} />
-      <div className="container grid grid-cols-3 gap-3">
+      <div
+        className="container grid gap-3 n-container"
+      >
         {data.map((card) => (
           <NewsCard
             img={card.img}

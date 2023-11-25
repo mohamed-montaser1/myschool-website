@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="flex items-center py-5 bg-[var(--logo-color)] flex-col">
+    <footer className="flex items-center py-5 bg-[var(--logo-color)] flex-col px-1">
       <Image src={Logo} alt="logo image" width={100} height={100} />
       <h2 className="text-white text-2xl mb-2">{translate["website-title"]}</h2>
       <p className="text-white">{translate["vision"]}</p>

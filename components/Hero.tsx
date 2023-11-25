@@ -24,7 +24,12 @@ function Hero() {
             {translate["btn-more"]}
           </a>
         </div>
-        <Image src={heroImage} alt="hero image" width={700} />
+        <Image
+          src={heroImage}
+          alt="hero image"
+          width={700}
+          className="max-[1222px]:hidden"
+        />
       </div>
     </section>
   );

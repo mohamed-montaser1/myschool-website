@@ -10,10 +10,13 @@ type Props = {};
 
 const OrganizationStructure: React.FC<Props> = () => {
   return (
-    <section className="organization-structure h-screen" id={translate['link-structure']}>
+    <section
+      className="organization-structure h-screen mt-32"
+      id={translate["link-structure"]}
+    >
       <Title text={translate["link-structure"]} />
       <div
-        className="container gap-3 mb-3 relative flex justify-center items-center"
+        className="container gap-3 mb-3 relative flex justify-center items-center max-[882px]:"
         style={{
           height: "calc(100vh - 90px)",
         }}
