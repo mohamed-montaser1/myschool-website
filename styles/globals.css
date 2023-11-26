@@ -29,7 +29,7 @@
     @apply mt-3 p-2 bg-[var(--logo-color)] text-white rounded-md;
   }
   .title {
-    font-size: clamp(20px, 5vw, 2.25rem);
+    font-size: clamp(20px, 10vw, 2.25rem);
   }
   .title::before {
     @apply absolute -bottom-6 bg-black w-full h-[2px];
@@ -61,6 +61,7 @@
   }
   .whatsapp-btn {
     animation: zoom 1s ease-in-out infinite alternate;
+    @apply bg-[#25d366];
   }
   .facebook-btn {
     animation: zoom 1s ease-in-out 1s infinite alternate;
@@ -68,11 +69,20 @@
   .n-container {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
+  .float-btn {
+    @apply fixed left-6 z-50 text-4xl text-white p-3 rounded-full cursor-pointer transition-all ease-in-out hover:scale-110;
+  }
 }
 
 @media (max-width: 510px) {
   .n-container {
-    grid-template-columns: repeat(auto-fit, min(400px, 1fr)) !important;
+    @apply flex flex-col items-center;
+  }
+}
+
+@media (max-width: 366px) {
+  .container {
+    @apply px-5;
   }
 }
 

@@ -11,27 +11,29 @@ type Props = {};
 const OrganizationStructure: React.FC<Props> = () => {
   return (
     <section
-      className="organization-structure h-screen mt-32"
+      className="organization-structure min-h-screen h-fit mt-32 relative max-[356px]:mb-32"
       id={translate["link-structure"]}
     >
-      <Title text={translate["link-structure"]} />
+      <Title
+        text={translate["link-structure"]}
+        style={{ marginBottom: "77px" }}
+      />
       <div
-        className="container gap-3 mb-3 relative flex justify-center items-center max-[882px]:"
+        className="container gap-3 mb-3 relative flex justify-center items-center max-[356px]:flex-col"
         style={{
           height: "calc(100vh - 90px)",
         }}
       >
         <Card icon={manager} text={translate["management"]} />
         <Card icon={teacher} text={translate["teachers"]} />
-
-        <Image
-          src={bgImage}
-          alt="background image"
-          className="w-full block opacity-40"
-          fill
-          style={{ zIndex: -1 }}
-        />
       </div>
+      <Image
+        src={bgImage}
+        alt="background image"
+        className="w-full block opacity-40 object-cover"
+        fill
+        style={{ zIndex: -1 }}
+      />
     </section>
   );
 };

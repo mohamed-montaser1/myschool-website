@@ -44,7 +44,7 @@ const data: Array<TNew> = [
 function Activities() {
   return (
     <section className="mt-12">
-      <Title text={translate["activities"]} />{" "}
+      <Title text={translate["activities"]} />
       <div className="container grid gap-3 n-container">
         {data.map((card) => (
           <NewsCard
