@@ -3,9 +3,10 @@ import Image, { StaticImageData } from "next/image";
 interface Props {
   icon: StaticImageData;
   text: string;
+  list: Array<string>;
 }
 
-function Card({ icon, text }: Props) {
+function Card({ icon, text, list }: Props) {
   return (
     <div
       className="card w-1/2 mx-auto max-[356px]:mt-20 max-[356px]:w-[100%]"
@@ -17,6 +18,11 @@ function Card({ icon, text }: Props) {
       <h2 className="text-white text-3xl text-center -translate-y-10">
         {text}
       </h2>
+      <ol type="1" className="pb-5 w-full">
+        {list.map((el) => (
+          <li className="text-center text-white text-xl mb-2">{el}</li>
+        ))}
+      </ol>
     </div>
   );
 }

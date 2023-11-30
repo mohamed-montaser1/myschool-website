@@ -9,6 +9,7 @@ import { Map } from "@/components/Map";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { Footer } from "@/components/Footer";
 import { FacebookIcon } from "@/components/FacebookIcon";
+import { Grades } from "@/components/Grades";
 
 const cairo = Cairo({
   weight: ["1000", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero />
       <About />
       <OrganizationStructure />
+      <Grades />
       <News />
       <Activities />
       <Map />
